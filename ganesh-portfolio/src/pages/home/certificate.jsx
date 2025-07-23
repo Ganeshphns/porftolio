@@ -66,21 +66,37 @@ import React from "react";
 
 const certificates = [
   {
-    title: "Full-Stack Web Development",
-    platform: "Udemy",
-    link: "https://www.udemy.com/certificate/XYZ123"
+    title: "Java Full Stack Development",
+    platform: "Eduskills",
+    href: "/certificates/eduskills-java.pdf",
   },
   {
-    title: "JavaScript Algorithms & Data Structures",
-    platform: "freeCodeCamp",
-    link: "https://www.freecodecamp.org/certification/ganesh/javascript"
+    title: "Front-End Development",
+    platform: "Talent Shine",
+    href: "/certificates/front-end-dev.pdf",
   },
   {
-    title: "Responsive Web Design",
-    platform: "freeCodeCamp",
-    link: "https://www.freecodecamp.org/certification/ganesh/responsive-web-design"
-  }
-];
+    title: "HTML5",
+    platform: "Infosys Springboard",
+    href: "/certificates/html-5.pdf",
+  },
+  {
+    title: "JavaScript",
+    platform: "Infosys Springboard",
+    href: "/certificates/js.pdf",
+  },
+  { 
+    title: "Virtual Internship Certificate",
+    platform: "EduSkills",
+    href: "/certificates/pitchuka-ganesh.pdf",
+  },
+  {
+    title: "TypeScript",
+    platform: "Infosys Springboard",
+    href: "/certificates/typescript1.pdf",
+  },
+]
+
 
 export default function Certificates() {
   return (
@@ -103,7 +119,7 @@ export default function Certificates() {
                 Issued by: <span className="font-medium">{cert.platform}</span>
               </p>
               <a
-                href={cert.link}
+                href={cert.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-2 text-sm text-white bg-[#ff5e5e] hover:bg-[#ff4343] px-4 py-1 rounded-full"

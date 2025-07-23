@@ -95,29 +95,31 @@
 // }
 
 
-
+import template from "../../assets/template.jpeg";
+import blogTemplate from "../../assets/blogTemplate.jpeg";
+import taskTemplate from "../../assets/taskTemplate.jpeg";
 import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const projects = [
-  {
-    title: "Restaurant Web App",
-    description:
-      "A full-featured restaurant app built with MERN stack, allowing users to browse menus, order food, and admins to manage inventory.",
-    tech: ["React", "Redux", "Node.js", "MongoDB", "Tailwind CSS"],
-    liveLink: "https://your-restaurant-app.vercel.app",
-    codeLink: "https://github.com/yourname/restaurant-app",
-    image: "https://via.placeholder.com/600x350?text=Restaurant+App",
-  },
+  
   {
     title: "E-Commerce Site",
     description:
       "An online store with user auth, product filters, cart and checkout. Built using the MERN stack.",
     tech: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
-    liveLink: "https://your-ecommerce-app.netlify.app",
-    codeLink: "https://github.com/yourname/ecommerce-app",
-    image: "https://via.placeholder.com/600x350?text=E-Commerce+Site",
-  },
+    liveLink: "https://mern-ecommerce-deploy-to-render-1-4qk1.onrender.com/shop/account ",
+    codeLink: "https://github.com/Ganeshphns/mern-ecommerce-deploy-to-render/tree/master",
+    image:template,
+  },{
+  title: "Blog App",
+  description:
+    "A dynamic blog application built using the MERN stack, enabling users to create, edit, and read blog posts with authentication and role-based access for authors and admins.",
+  tech: ["React", "Redux", "Node.js", "MongoDB", "Tailwind CSS"],
+  liveLink: "https://your-blog-app.vercel.app",
+  codeLink: "https://github.com/yourname/blog-app",
+  image: blogTemplate,
+},
   {
     title: "Task Manager",
     description:
@@ -125,7 +127,7 @@ const projects = [
     tech: ["React", "Firebase", "Tailwind CSS"],
     liveLink: "https://your-taskmanager-app.vercel.app",
     codeLink: "https://github.com/yourname/task-manager",
-    image: "https://via.placeholder.com/600x350?text=Task+Manager",
+    image: taskTemplate,
   },
 ];
 

@@ -243,10 +243,10 @@ export default function Contact() {
             <a href="https://github.com/Ganeshphns" target="_blank" rel="noopener noreferrer">
               <FaGithub />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/ganesh_phns?utm_source=qr&igsh=MTNkeGJ6ZzcyajU1cQ== " target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/phnsganesh?t=000Eg693WQ4J-O-gTX38UA&s=09" target="_blank" rel="noopener noreferrer">
               <FaTwitter />
             </a>
           </div>

@@ -54,8 +54,18 @@ import heroImg from "../../assets/1000204134.jpg";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
+
+  const handleViewWork = () => {
+    navigate("/portfolio");
+  };
+  const handleHireMe= () => {
+    navigate("/contact");
+  };
+
   return (
     <section className="relative min-h-[92vh] flex items-center bg-white overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -63,7 +73,7 @@ function Home() {
       </div>
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between relative z-10 px-4 py-16">
         {/* Left Content */}
-        <div className="flex-1 text-slate-800 max-w-xl">
+        <div className="flex-1 text-slate-800 max-w-xl pl-10">
           <h2 className="text-3xl font-bold text-[#ff5e5e] mb-2">HELLO!</h2>
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
             I Am <span className="text-slate-800">Ganesh</span>
@@ -75,16 +85,20 @@ function Home() {
             functionality.
           </p>
           <div className="flex gap-4">
-            <button className="bg-[#ff5e5e] hover:bg-[#ff4343] text-white font-semibold py-2 px-6 rounded-full transition">
+            <button
+            onClick={handleViewWork}
+            className="bg-[#ff5e5e] hover:bg-[#ff4343] text-white font-semibold py-2 px-6 rounded-full transition">
               View Work
             </button>
-            <button className="bg-[#ff5e5e] hover:bg-[#ff4343] text-white font-semibold py-2 px-6 rounded-full transition">
+            <button 
+            onClick={handleHireMe}
+            className="bg-[#ff5e5e] hover:bg-[#ff4343] text-white font-semibold py-2 px-6 rounded-full transition">
               Hire Me
             </button>
           </div>
         </div>
         {/* Right Image */}
-        <div className="flex-1 flex justify-center mt-10 md:mt-0">
+        <div className="flex-1 flex justify-center mt-10 md:mt-0 pr-10">
           <img
             src={heroImg}
             alt="Profile"
@@ -97,6 +111,3 @@ function Home() {
 }
 
 export default Home;
-
-
-

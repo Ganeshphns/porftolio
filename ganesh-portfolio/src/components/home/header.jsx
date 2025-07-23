@@ -149,14 +149,48 @@ import { portfolioHeaderMenuItems } from "../../config/index";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-function MenuItems() {
+// function MenuItems() {
+//   return (
+//     <nav className="flex flex-col mb-3 lg:mb-0 lg:items-center gap-6 lg:flex-row">
+//       {portfolioHeaderMenuItems.map((menuItem) => (
+//         <Link
+//           className="text-lg pt-5 hover:text-[#ff5e5e] cursor-pointer text-slate-800 font-medium transition"
+//           key={menuItem.id}
+//           to={menuItem.path}
+//         >
+//           {menuItem.label}
+//         </Link>
+//       ))}
+//     </nav>
+//   );
+// }
+// For mobile (inside <Sheet>)
+function MenuItemsMobile() {
   return (
-    <nav className="flex flex-col mb-3 lg:mb-0 lg:items-center gap-6 lg:flex-row">
+    <nav className="flex flex-col gap-6">
+      {portfolioHeaderMenuItems.map((menuItem) => (
+        <SheetClose asChild key={menuItem.id}>
+          <Link
+            to={menuItem.path}
+            className="text-lg  hover:text-[#ff5e5e] font-medium transition"
+          >
+            {menuItem.label}
+          </Link>
+        </SheetClose>
+      ))}
+    </nav>
+  );
+}
+
+// For desktop (outside <Sheet>)
+function MenuItemsDesktop() {
+  return (
+    <nav className="flex flex-row gap-6 items-center">
       {portfolioHeaderMenuItems.map((menuItem) => (
         <Link
-          className="text-lg pt-5 hover:text-[#ff5e5e] cursor-pointer text-slate-800 font-medium transition"
           key={menuItem.id}
           to={menuItem.path}
+          className="text-lg  hover:text-[#ff5e5e] font-medium transition"
         >
           {menuItem.label}
         </Link>
@@ -164,6 +198,7 @@ function MenuItems() {
     </nav>
   );
 }
+
 
 
 
@@ -224,18 +259,29 @@ function Header() {
               <span className="sr-only">Toggle header menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent
+          {/* <SheetContent
             side="left"
             className="w-full max-w-xs px-5 py-7 pb-0 bg-white text-slate-800 overflow-hidden"
           >
             <SheetClose className="text-slate-800" />
             <MenuItems />
             <HeaderRightContent />
-          </SheetContent>
+          </SheetContent> */}
+          <SheetContent
+  side="left"
+  className="w-full max-w-xs px-5 py-7 pb-0 bg-white text-slate-800 overflow-hidden"
+>
+  <SheetClose className="text-slate-800" />
+  <MenuItemsMobile />
+  <HeaderRightContent />
+</SheetContent>
         </Sheet>
-        <div className="hidden lg:block">
+        {/* <div className="hidden lg:block">
           <MenuItems />
-        </div>
+        </div> */}
+        <div className="hidden lg:block">
+  <MenuItemsDesktop />
+</div>
         <div className="hidden lg:block">
           <HeaderRightContent />
         </div>
